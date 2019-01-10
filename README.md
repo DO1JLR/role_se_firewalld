@@ -1,4 +1,4 @@
- Configure firewalld on SELINUX Server
+ Ansible role to configure firewalld on SELINUX Server
 --------------------------------------
 
 Features:
@@ -7,3 +7,6 @@ Features:
 + Allow reverse proxy (for nginx)
 + Restart firewalld daemon
 
+
+Tested on:
+ - Fedora 29 Server with SELINUX Policy enabled

@@ -34,3 +34,33 @@
     state: yes
     persistent: yes
 
+- name: Set domain_can_mmap_files flag on and keep it persistent across reboots
+  seboolean:
+    name: domain_can_mmap_files
+    state: yes
+    persistent: yes
+
+- name: Set httpd_can_connect_ldap flag on and keep it persistent across reboots
+  seboolean:
+    name: httpd_can_connect_ldap
+    state: yes
+    persistent: yes
+
+- name: Set httpd_can_network_relay flag on and keep it persistent across reboots
+  seboolean:
+    name: httpd_can_network_relay
+    state: yes
+    persistent: yes
+
+- name: copy selinux nginx custom policy
+  copy: 
+    src: files/mypol.te
+    dest: /root/mypol.te
+
+- name: copy selinux nginx custom policy
+  copy: 
+    src: files/mypol.pp
+    dest: /root/mypol.pp
+
+- name:  enable nginx custom selinux policy
+  shell: semodule -i /root/mypol.pp

@@ -5,6 +5,7 @@
 
 + Allow HTTP(S) Traffic on Fedora Server
 + Allow reverse proxy (for nginx)
++ Allow PHP
 + Restart firewalld daemon
 
 

@@ -9,5 +9,8 @@
 + Restart firewalld daemon
 
 
+You can diable selinux by setting ``disable_selinux: true``.
+But it is highly recomended to keep it activated and only configure what you realy need.
+
 ### Tested on:
  - Fedora 29 Server with SELINUX Policy enabled

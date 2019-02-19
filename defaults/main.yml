@@ -1,4 +1,4 @@
 ---
 
-disbale_selinux: false
+disable_selinux: false
 
